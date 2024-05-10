@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { IoClose } from "react-icons/io5";
 import Login from "./Login";
 import ResetPassword from "./ResetPassword";
@@ -12,9 +12,9 @@ const AuthModal: React.FC<AuthModalProps> = () => {
   const authModal = useRecoilValue(authModalState);
   const setAuthModal = useSetRecoilState(authModalState);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setAuthModal((prev) => ({ ...prev, isOpen: false, type: "login" }));
-  };
+  }, [setAuthModal]); // Include setAuthModal in the dependency array
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
