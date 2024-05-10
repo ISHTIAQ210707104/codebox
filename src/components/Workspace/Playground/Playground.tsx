@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PreferenceNav from "./PreferenceNav/Preferencenav";
+import PreferenceNav from "./PreferenceNav/PreferenceNav";
 import Split from "react-split";
 import CodeMirror from "@uiw/react-codemirror";
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
