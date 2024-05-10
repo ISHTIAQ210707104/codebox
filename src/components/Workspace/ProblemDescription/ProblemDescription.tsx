@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
-import Login from "./Login";
-import ResetPassword from "./ResetPassword";
-import Signup from "./Signup";
+import Login from "@/components/Modals/Login";
+import ResetPassword from "@/components/Modals/ResetPassword";
+import Signup from "@/components/Modals/Signup";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
   AiFillLike,
